@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Estou dormindo no momento.</p>
+        <p v-if="estou_trabalhando">Estou dormindo no momento.</p>
         <p>Utilizo as seguintes tecnologias:</p>
         <ul>
             <li>Javascript</li>
@@ -12,6 +12,11 @@
 
 <script>
     export default {
-        name: 'Info'
+        name: 'Info',
+        data() {
+            return {
+                estou_trabalhando: true
+            }
+        }
     }
 </script>
